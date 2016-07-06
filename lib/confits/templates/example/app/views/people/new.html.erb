@@ -1,0 +1,9 @@
+<h1> Add your name </h1>
+
+<%= flash[:notice] %>
+
+<%= form_for @person do |f| %>
+  <%= f.text_field :name %>
+  <%= @person.errors[:name].join(', ') %>
+  <%= f.submit 'Add' %>
+<% end %>
